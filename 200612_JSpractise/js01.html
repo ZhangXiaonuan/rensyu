@@ -3,22 +3,22 @@
 
 <head lang="en">
 	<meta charset="UTF-8">
-	<title>数据类型转换</title>
+	<title>数据类型之NaN</title>
 </head>
 
 <body>
 	<script>
-		// 补充代码
-		var a = "50px",
-			b = "px50",
-			c = "050px",
-			d = "50.12345",
-			e = "50.123px45";
-		console.log(parseFloat(a))
-		console.log(parseFloat(b))
-		console.log(parseFloat(c))
-		console.log(parseFloat(d))
-		console.log(parseFloat(e))
+		//补充代码
+		var one = null,
+			two = 10,
+			three = "我是字符串",
+			four = "10",
+			five = undefined
+		console.log(isNaN(one));
+		console.log(isNaN(two));
+		console.log(isNaN(three));
+		console.log(isNaN(four));
+		console.log(isNaN(five));
 	</script>
 </body>
 
