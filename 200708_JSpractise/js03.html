@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		var a = prompt("请输入学生的成绩")
+
+		if (a >= 90 && a <= 100) {
+			alert("优秀")
+		} else if (a >= 80 && a <= 89) {
+			alert("良好")
+		} else if (a >= 70 && a <= 79) {
+			alert("一般")
+		} else if (a >= 60 && a <= 69) {
+			alert("及格")
+		} else if (a < 0 || a > 100) {
+			alert("您输入的成绩有误")
+		} else {
+			alert("不及格")
+		}
+	</script>
+</body>
+
+</html>
