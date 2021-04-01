@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+       // 声明一个函数
+       function myFun(){
+       	  alert("我是一个函数");
+       }
+       // 函数的调用
+       //myFun();
+
+       // 声明一个带有参数的函数
+       function add(num1,num2){
+          var sum=num1+num2;
+          return sum;
+       }
+       
+       /*console.log(add(3,5));
+
+       alert(add(99,789));
+
+       var s=add(-1,-9);
+
+       document.write('-1+-9='+s)*/
+
+       function myFunction(arg){
+          // 如果arg是非数字，不做任何操作，否则返回arg的2倍
+          if(isNaN(arg)) return;
+          return arg*2;
+       }
+
+       console.log(myFunction(40));
+	</script>
+</body>
+</html>

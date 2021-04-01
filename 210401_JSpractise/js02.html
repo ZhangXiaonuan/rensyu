@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数的定义和调用function</title>
+    <!-- 
+        function 函数名(参数1,参数2,.....参数n){
+            执行语句1;
+            执行语句2;
+            ...
+            执行语句n;
+        }
+        调用函数的方法：
+        函数名(参数1,参数2;...);
+     -->
+</head>
+<body>
+    <script>
+        function sum(a,b,c,d){
+            var y=a+b+c+d;
+            document.write(y+"<br />");
+            var x=a-b;
+            document.write(x+"<br />");
+        }
+        sum(1,2,3,4);//页面中会有两个值
+        sum(1,3)//页面中会有两个值
+    </script>
+</body>
+</html>   
