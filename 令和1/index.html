@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新年号発表！</title>
+ 
+<style>
+.all {
+    text-align: center;
+}
+.reiwaImg {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+.camera {
+    transform:translateY(-70px);
+    -webkit-transform:translateY(-70px);
+    -moz-transform:translateY(-70px);
+    -ms-transform:translateY(-70px);
+}
+.cmImg {
+    width: 15%;
+}
+.cameraMan2 {
+    margin-left: 13rem;
+    transform: rotateY(180deg);
+}
+</style>
+ 
+<script>  
+function changeImg1(){
+     document.getElementById("reiwa").src = "images/gengou_happyou_reiwa1.png";
+}
+function changeImg2() {
+    document.getElementById("reiwa").src = "images/gengou_happyou_reiwa2.png";
+}
+</script> 
+</head>
+
+<body>
+<div class="all">
+    <img class="reiwaImg" id="reiwa" alt="reiwa" src="images/gengou_happyou_reiwa1.png"/>
+    <div class="camera">
+        <img class="cmImg cameraMan1" alt="cmLeft" style="cursor:pointer" onclick="changeImg1();" src="https://3.bp.blogspot.com/-7AFwO16Dbs4/XDXbWzhiIrI/AAAAAAABQ_Q/sKsSqYvpk84Ym0iNoBbC25roPwKpG-4dQCLcBGAs/s800/camera_bouen_lens.png"/>
+        <img class="cmImg cameraMan2" alt="cmRight" style="cursor:pointer" onclick="changeImg2();" src="https://3.bp.blogspot.com/-7AFwO16Dbs4/XDXbWzhiIrI/AAAAAAABQ_Q/sKsSqYvpk84Ym0iNoBbC25roPwKpG-4dQCLcBGAs/s800/camera_bouen_lens.png"/>
+    </div>
+</div>
+
+</body>
+</html>

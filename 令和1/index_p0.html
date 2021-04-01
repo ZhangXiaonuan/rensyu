@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ 
+<style>
+.reiwaImg {
+    display: block;
+    width: 25%;
+}
+
+.cmImg {
+    width: 15%;
+}
+</style>
+ 
+<script>
+var ImgUrl1="https://1.bp.blogspot.com/-TEfo3GegD2s/XKGJu6JrLzI/AAAAAAABSHs/_loS9jFH9GkNq7CDvHuKthAnoTy4VTWAACLcBGAs/s800/gengou_happyou_reiwa_kakageru.png";
+var ImgUrl2="https://2.bp.blogspot.com/-c-Ws8qkxBq4/XKF92e4mmBI/AAAAAAABSHQ/YHiJQq1xOQwpQFXKHhrvZmPa4EhW6xCUQCLcBGAs/s800/gengou_happyou_reiwa.png";
+
+function changeImg(btn) {
+    var obj = document.getElementById("reiwa");   
+    if (btn.id == "btn1") {
+        obj.setAttribute("src", ImgUrl1);     
+    } else { 
+        obj.setAttribute("src", ImgUrl2); 
+    }
+}
+</script> 
+</head>
+
+<body>
+<div class="all">
+    <img class="reiwaImg" id="reiwa" alt="XXX" src="https://1.bp.blogspot.com/-TEfo3GegD2s/XKGJu6JrLzI/AAAAAAABSHs/_loS9jFH9GkNq7CDvHuKthAnoTy4VTWAACLcBGAs/s800/gengou_happyou_reiwa_kakageru.png"/>
+    <img class="cmImg cameraMan1" id="btn1" onclick="changeImg(this)" alt="XXX" src="https://3.bp.blogspot.com/-7AFwO16Dbs4/XDXbWzhiIrI/AAAAAAABQ_Q/sKsSqYvpk84Ym0iNoBbC25roPwKpG-4dQCLcBGAs/s800/camera_bouen_lens.png" onclick="changeImg();"/>
+    <img class="cmImg cameraMan2" id="btn2" onclick="changeImg(this)" alt="XXX" src="https://3.bp.blogspot.com/-7AFwO16Dbs4/XDXbWzhiIrI/AAAAAAABQ_Q/sKsSqYvpk84Ym0iNoBbC25roPwKpG-4dQCLcBGAs/s800/camera_bouen_lens.png" onclick="changeImg();"/>
+</div>
+
+</body>
+</html>

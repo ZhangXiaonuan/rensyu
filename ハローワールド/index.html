@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ 
+<style>
+.div1 {
+    position: relative;
+}
+.center {
+    position: absolute;
+    text-align:center;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.input_wrs {
+    display: block;
+    margin-top: 1.5rem;
+    color: #999;
+    font-size:6rem;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+}
+.btn {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    font-size: 2.5rem;
+}
+</style>
+ 
+<script>  
+    var update = null;
+    function change(){
+        var text = prompt("内容を入力してください","Hello!"); //弹出系统输入框，并把文字赋值给text
+        update = document.getElementById("input_text"); //寻找a标签内input_text，并把input_text的对象复制给update
+        if (text !=null && text != undefined && text !=""){ //若返回值为null，则保留原值
+        update.innerHTML = text; //把刚才的文字 赋值给 a标签的innerHTML，也就是内容
+        }
+    }
+</script> 
+</head>
+
+<body>
+    <div id="div1">
+        <table>
+            <tr class="center">
+                <td><a id="input_text" target="_blank" class= "input_wrs">Hello!</a>
+                <input type="button" onClick="change()" class= "btn btn-primary" value="変更"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

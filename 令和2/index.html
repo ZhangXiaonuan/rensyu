@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .div1 {
+      position: relative;
+    }
+
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .date {
+      padding: .4rem .2rem;
+      border: 1px solid #e5e5e5;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background-color: #4995e9;
+      border-color: #84a1c4;
+      border: 1px solid transparent;
+    }
+
+    .btn {
+      padding: .3rem .5rem;
+    }
+
+    .inputImg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 5rem;
+    }
+  </style>
+
+  <script>
+    function bl() {
+      var a = document.getElementById("inpt");
+      if (a.value.length <= 0) {
+        a.style.color = "#7c7c7c";
+        a.value = "2019/04/05";
+      }
+    }
+
+    function fo() {
+      var a = document.getElementById("inpt");
+      if (a.value == "2019/04/05") {// && a.style.color == "#7c7c7c"
+        a.style.color = "#000000";
+        a.value = "";
+      }
+    }
+
+    function change() {
+      var a = document.getElementById("inpt");
+      var myDate = new Date(a.value);
+      var errorDate = new Date("1989/1/1");
+      var ReiWaDate = new Date("2019/5/1");
+      if (myDate >= ReiWaDate) {//reiwa
+        document.getElementById("waitInput").setAttribute("src", "images/gengou_happyou_reiwa.png");
+      }
+      else if (myDate < errorDate) {//error
+        document.getElementById("waitInput").setAttribute("src", "images/game_gamen_bug.png");
+      }
+      else {//heisei
+        document.getElementById("waitInput").setAttribute("src", "images/gengou_happyou_heisei.png");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="div1">
+    <table>
+      <tr class="center">
+        <td><input id="inpt" style="color: #7c7c7c;" type="text" value="2019/04/05"
+            onfocus="fo()" onblur="bl()" name="keyword" class="date">
+          <input type="button" onClick="change()" class="btn btn-primary" value="実行"></td>
+      </tr>
+    </table>
+    <img class="inputImg" id="waitInput" alt="waitInput" src="images/gengou_system_heisei.png" />
+  </div>
+</body>
+
+</html>

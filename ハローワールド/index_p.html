@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ 
+<style>
+.box{
+    display:none;
+    width:50%;
+    margin-top:10%;
+    margin:auto;
+    padding:28px;
+    height:240px;
+    border:1px #111 solid;
+    border-radius: .3rem;
+}
+.box.show{display:block;} 
+.box .x{font-size:18px; text-align:right; display:block;}
+.box input{width:80%; font-size:18px; margin-top:18px;}
+.ip_words {
+    color: #666;
+    font-size:5rem;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    border-radius: .3rem;
+}
+.btn {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+}
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+</style>
+ 
+<script>  
+        var update = null;
+        function change(n,t){
+            document.getElementById('inputbox').style.display=n?'block':'none';
+            if (t)
+                update = t.parentNode.getElementsByTagName("a")[0];
+        }
+
+        function ok() {
+            var ipt = document.getElementById('inputbox').getElementsByTagName('input');
+            update.innerHTML = ipt[0].value;
+            change(0);           
+        }
+
+     </script> 
+</head>
+
+<body>
+    <div id="div1">
+        <table>
+            <tr>
+                <td><a target="_blank" class= "ip_words">Hello!</a><br/>
+                <input type="button" onClick="change(1,this)" class= "btn btn-primary" value="変更"></td>
+            </tr>
+        </table>
+    </div>
+ 
+    <div id='inputbox' class="box">
+        <a class='x' href=''; onclick="change(0); return false;">戻る</a>
+        <p>入力：</p><input type="text">
+        <input type="button" class= "btn-lg btn-primary" value="確定" onClick="ok()">
+    </div>
+ 
+</body>
+</html>
