@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>成绩判断</title>
+</head>
+
+<body>
+	<script>
+		var week = new Date().getDay();
+		var weekstr = ""; //初始化变量为空
+		//多条件判断 switch
+		switch (week) {
+			case 0:
+				weekstr = "日"; // ”今天是星期“ 这个都是一样的，把后面不一样的提出来
+				break; //退出
+			case 1:
+				weekstr = "一";
+				break;
+			case 2:
+				weekstr = "二";
+				break;
+			case 3:
+				weekstr = "三";
+				break;
+			case 4:
+				weekstr = "四";
+				break;
+			case 5:
+				weekstr = "五";
+				break;
+			case 6:
+				weekstr = "六";
+				break;
+		}
+		document.write("今天是星期" + weekstr);
+	</script>
+</body>
+
+</html>
