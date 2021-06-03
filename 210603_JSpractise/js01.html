@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		//return后可不用加值
+		function myFunction(arg){
+		//如果arg是非数字，不做任何操作；否则返回arg的2倍
+		if(isNaN(arg)) return;
+		return arg*2;
+		}
+		console.log(myFunction("abc")); //返回结果是undefined
+		console.log(myFunction(40)); //返回结果是80
+		</script>
+</head>
+<body>
+	
+</body>
+</html>
