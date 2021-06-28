@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function numAdd() {
+			if (arguments.length == 1) {
+				alert(arguments[0] + 5);
+			} else if (arguments.length == 2) {
+				alert(arguments[0] + arguments[1]);
+				// alert(arguments[0] + arguments[2]);  报错成为NaN，因为不存在第三个数[2]
+			} else if (arguments.length == 3) {
+				alert(arguments[0] + arguments[2]);
+			}
+		}
+		numAdd(1);
+		numAdd(10, 20);
+		numAdd(10, 20, 30);
+	</script>
+</body>
+
+</html>
