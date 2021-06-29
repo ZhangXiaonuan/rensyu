@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var input;
+			var arr=[ ];
+			while(input!="-1"){
+				input=Number(prompt("请输入您想排序的数字"));
+				//补充代码
+				arr.push(input);
+			}
+			//补充代码
+			arr.pop();
+			arr.sort(function(x,y){return y-x}); //在括号中补充代码
+		document.write(arr);
+		</script>
+</body>
+</html>
