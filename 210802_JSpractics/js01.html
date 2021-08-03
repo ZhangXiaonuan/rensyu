@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr;
+		var newArr=new Array();
+		while(arr!="-1"){
+			arr=prompt("请输入任意数字");
+			//把输入的数值添加到newArr变量数组中
+			newArr.push(arr);
+		}
+			//替换
+		newArr.splice(0,2,"hello");	
+			//去掉最后一位，也就是-1
+		newArr.pop()	
+			//页面打印
+		document.write(newArr);
+	</script>       
+</body>
+</html>
